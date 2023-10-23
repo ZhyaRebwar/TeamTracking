@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/RaisinBlack"
+    android:layout_height="match_parent"
+
+    tools:context=".FriendRequest">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/firstLinearLayout"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchUsernameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Search for user:"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:backgroundTint="@color/Poppy"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="searchUser"
+            android:text="Search" />
+    </LinearLayout>
+
+
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:layout_below="@+id/firstLinearLayout" >-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/firstLinearLayout"
+            android:layout_marginTop="35dp" >
+
+            <ListView
+                android:id="@+id/items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@color/BlueGray"
+                android:background="@color/RaisinBlack"
+                android:divider="@color/white"
+                android:dividerHeight="5dp"/>
+
+        </LinearLayout>
+<!--    </ScrollView>-->
+</RelativeLayout>
